@@ -1,0 +1,195 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style pour le logo */
+.logo {
+    height: 150px; /* Ajustez cette valeur pour agrandir le logo selon vos besoins */
+    width: auto; /* Ajustez la largeur en conséquence pour garder les proportions du logo */
+    transition: all 0.3s ease; /* Ajoutez une transition douce si vous souhaitez animer le changement de taille */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77ab59 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.scrollable, .scrollable2 {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.containerImgActu img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.manifest-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #77ab59;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.footer-text a {
+    color: #77ab59;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-content nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .logo {
+        height: 100px; /* Ajustez la taille pour les petits écrans si nécessaire */
+        width: auto; /* Ajustez la largeur en conséquence */
+    }
+}
