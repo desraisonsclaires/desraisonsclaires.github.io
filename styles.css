@@ -30,8 +30,8 @@ p {
 }
 
 .text-position-titre {
-    position: relative; /* Vous pouvez utiliser absolute, fixed, etc., selon vos besoins */
-    left: 50px; /* Ajustez ces valeurs selon vos besoins */
+    position: relative;
+    left: 50px;
     top: -100px;
     /* Autres styles si nécessaire */
 }
@@ -54,7 +54,7 @@ header {
     background-color: #4285f4;
     color: white;
     padding: 10px 0;
-    position: fixed; /* Position fixe pour le header */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -136,16 +136,15 @@ footer {
     color: #333;
     text-align: center;
     padding: 10px 0;
-    /*position: absolute; /* Position absolue par défaut */
-    bottom: 0; /* Alignement en bas de la fenêtre */
-    width: 100%; /* Occupe toute la largeur */
-    height: 100px; /* Hauteur du pied de page */
-    font-size: 0.8em; /* Taille de police du pied de page */
-    z-index: 100; /* Assurez-vous que le pied de page est au-dessus du contenu */
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    font-size: 0.8em;
+    z-index: 100;
 }
 
 footer p {
-    font-size: 1em; /* Ajustement de la taille du texte du paragraphe */
+    font-size: 1em;
 }
 
 footer a {
@@ -159,10 +158,10 @@ footer a:hover {
 }
 
 .footer-text {
-    position: absolute; /* Position absolue pour pouvoir ajuster librement la position */
-    left: 50%; /* Décalage vers la gauche de 50% de la largeur du conteneur parent */
-    transform: translateX(-50%); /* Centrer horizontalement */
-    bottom: -71px; /* Espacement de 10px depuis le bas */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -71px;
 }
 
 /* Columns */
@@ -180,19 +179,19 @@ footer a:hover {
 /* Scrollable containers */
 .scrollable {
     position: absolute;
-    left: 950px; /* position à gauche */
-    top: -25px; /*  position en haut */
-    width: calc(65% - 400px); /*  largeur en fonction du contenu et de l'espace nécessaire */
-    max-height: calc(100vh - 180px); /* hauteur maximale pour s'adapter à l'écran */
+    left: 950px;
+    top: -25px;
+    width: calc(65% - 400px);
+    max-height: calc(100vh - 180px);
     overflow-y: auto;
 }
 
 .scrollable2 {
     position: absolute;
-    left: 500px; /* position à gauche */
-    top: -25px; /*  position en haut */
-    width: calc(65% - 400px); /*  largeur en fonction du contenu et de l'espace nécessaire */
-    max-height: calc(100vh - 180px); /* hauteur maximale pour s'adapter à l'écran */
+    left: 500px;
+    top: -25px;
+    width: calc(65% - 400px);
+    max-height: calc(100vh - 180px);
     overflow-y: auto;
 }
 
@@ -201,7 +200,7 @@ footer a:hover {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* Ratio 16:9 pour les vidéos */
+    padding-bottom: 56.25%;
     margin-top: 20px;
 }
 
@@ -244,16 +243,42 @@ footer a:hover {
     footer {
         position: relative; /* Position relative pour que le footer suive le flux de la page */
     }
+
+    .columns {
+        flex-direction: column; /* Passer à une colonne pour les petits écrans */
+    }
+
+    .scrollable, .scrollable2 {
+        position: static; /* Position statique pour les conteneurs scrollables */
+        width: 100%; /* Prendre toute la largeur disponible */
+        max-height: none; /* Retirer la hauteur maximale */
+    }
+
+    .manifest-button {
+        margin-top: 20px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .slideshow-container {
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
 }
 
 /* Slideshow */
 .slideshow-container {
-    max-width: 600px; /* Largeur maximale du conteneur */
-    position: relative; /* Position relative pour que les éléments internes puissent être positionnés Absolument */
-    left: -50px; 
-    top: -300px; 
-    margin-left: 20px; 
-    margin-top: 20px; 
+    max-width: 600px;
+    position: relative;
+    left: -50px;
+    top: -300px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .slide {
@@ -299,10 +324,10 @@ footer a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    position: relative; /*   contexte de positionnement */
+    position: relative;
     margin-top: 150px;
-    left: 750px; 
-    top: -1725px; 
+    left: 750px;
+    top: -1725px;
 }
 
 .manifest-button:hover {
