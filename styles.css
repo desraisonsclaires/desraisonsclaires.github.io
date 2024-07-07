@@ -12,6 +12,7 @@ body {
     background-color: #f9f9f9;
     color: #333;
     margin: 20px;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 .smaller-text {
@@ -279,6 +280,8 @@ footer a:hover {
     top: -300px;
     margin-left: 20px;
     margin-top: 20px;
+    max-width: 100%; /* Assure que le conteneur ne dépasse pas la largeur de l'écran */
+    overflow: hidden; /* Cache tout débordement */
 }
 
 .slide {
